@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenTech | Tecnología sencilla e inclusiva</title>
+  <meta name="description" content="Tecnología accesible y fácil de usar para personas con bajos recursos y adultos mayores. Inclusión digital práctica." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1022; /* azul muy oscuro */
+      --bg2:#2d0f47; /* púrpura oscuro */
+      --text:#f5f7ff;
+      --muted:#c8cbe0;
+      --accent:#8b5cf6; /* púrpura */
+      --accent-2:#22d3ee; /* cian */
+      --ok:#16a34a; --warn:#f59e0b; --err:#ef4444;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:
+      radial-gradient(1200px 800px at 85% -10%, rgba(34,211,238,.2), transparent 60%),
+      radial-gradient(1000px 700px at -10% 20%, rgba(139,92,246,.25), transparent 55%),
+      linear-gradient(180deg, var(--bg), var(--bg2));}
+    a{color:var(--accent-2)}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#0b1022;font-weight:700;text-decoration:none}
+    .btn:focus{outline:3px solid #fff;outline-offset:2px}
+    header{position:sticky;top:0;background:rgba(11,16,34,.85);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid rgba(255,255,255,.08);z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:focus,nav a:hover{color:#fff}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 20px rgba(34,211,238,.35)}
+    .hero{padding:72px 0 32px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .grid{display:grid;gap:24px}
+    @media(min-width:900px){.grid-2{grid-template-columns:1.2fr .8fr}}
+    .card{border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.03);border-radius:16px;padding:20px}
+    h1{font-size:clamp(32px,4vw,56px);line-height:1.05;margin:0 0 10px}
+    h2{font-size:clamp(22px,2.2vw,34px);margin:0 0 10px}
+    h3{font-size:20px;margin:0 0 6px}
+    p{color:var(--muted);line-height:1.6}
+    ul{margin:0;padding-left:18px}
+    li{margin:6px 0}
+    .kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .kpi div{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;text-align:center}
+    .badge{display:inline-block;border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:6px 10px;font-size:12px;color:#dbeafe;background:rgba(59,130,246,.12)}
+    .checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px}
+    .check{display:flex;gap:10px;align-items:flex-start;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:10px;background:rgba(34,197,94,.08)}
+    .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,#22c55e,#86efac);box-shadow:0 0 0 2px rgba(34,197,94,.35)}
+    .footer{border-top:1px solid rgba(255,255,255,.08);margin-top:32px;padding:28px 0;color:var(--muted)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    /* keyboard focus for accessibility */
+    :focus{outline:3px solid #fff;outline-offset:2px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" role="navigation" aria-label="Principal">
+      <nav>
+        <div class="logo" aria-label="OpenTech Inicio">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <strong>OpenTech</strong>
+        </div>
+        <div style="display:flex;gap:16px">
+          <a href="#valor">Valor</a>
+          <a href="#publico">Público</a>
+          <a href="#solucion">Solución</a>
+          <a href="#inclusion">Inclusión</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container" tabindex="-1">
+    <!-- HERO -->
+    <section class="hero grid grid-2" aria-labelledby="tit-hero">
+      <div>
+        <h1 id="tit-hero">Tecnología sencilla e inclusiva</h1>
+        <p>Dispositivos y software fáciles de usar para personas con bajos recursos y adultos mayores. Priorizamos la simplicidad y la inclusión digital.</p>
+        <div style="display:flex;gap:12px;margin-top:16px">
+          <a class="btn" href="#solucion">Saber más</a>
+          <a class="btn" href="#contacto" aria-label="Ir a contacto">Contáctanos</a>
+        </div>
+      </div>
+      <div class="card" aria-label="Resumen de propuesta">
+        <h3>Promesa de valor</h3>
+        <p>Tecnología de vanguardia accesible, con funciones claras y preinstaladas para comunicación, salud y educación.</p>
+        <div class="kpi" aria-label="Puntos clave">
+          <div>
+            <div class="badge">Fácil</div>
+            <p style="margin:6px 0 0">Interfaz simple</p>
+          </div>
+          <div>
+            <div class="badge">Accesible</div>
+            <p style="margin:6px 0 0">Bajo costo</p>
+          </div>
+          <div>
+            <div class="badge">Soporte</div>
+            <p style="margin:6px 0 0">Acompañamiento</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALOR -->
+    <section id="valor" class="grid grid-2" aria-labelledby="tit-valor" style="padding:28px 0">
+      <div class="card">
+        <h2 id="tit-valor">Problema</h2>
+        <p>Para muchas personas, acceder a un smartphone y aprender a usarlo es caro y complejo.</p>
+      </div>
+      <div class="card">
+        <h2>Solución</h2>
+        <p>Ofrecemos dispositivos de bajo costo y un sistema sencillo. Incluye llamadas, mensajes y apps básicas con guía paso a paso.</p>
+      </div>
+    </section>
+
+    <!-- PÚBLICO OBJETIVO -->
+    <section id="publico" style="padding:8px 0 28px" aria-labelledby="tit-publico">
+      <div class="card">
+        <h2 id="tit-publico">Público objetivo</h2>
+        <ul>
+          <li>Personas con poco poder adquisitivo que no pueden pagar smartphones costosos.</li>
+          <li>Adultos mayores con dificultades para usar celulares complejos.</li>
+          <li>Familias en zonas con conectividad limitada.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SOLUCIÓN DETALLE -->
+    <section id="solucion" class="grid grid-2" aria-labelledby="tit-solucion" style="padding:8px 0 28px">
+      <div class="card">
+        <h2 id="tit-solucion">Cómo interactuamos</h2>
+        <ul>
+          <li><strong>Talleres comunitarios gratuitos:</strong> capacitaciones básicas y prácticas.</li>
+          <li><strong>Atención accesible:</strong> línea gratuita y asesoría presencial.</li>
+          <li><strong>Plataforma sencilla:</strong> software preinstalado de uso intuitivo.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Modelo de negocio</h2>
+        <ul>
+          <li>Venta directa de dispositivos a bajo costo.</li>
+          <li>Licenciamiento de software a operadores, gobiernos y ONG.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ESCALABILIDAD -->
+    <section aria-labelledby="tit-esc" style="padding:8px 0 28px">
+      <div class="card">
+        <h2 id="tit-esc">Escalabilidad</h2>
+        <ol>
+          <li>Fase 1: lanzamiento local en zonas con adultos mayores y bajos ingresos.</li>
+          <li>Fase 2: expansión estatal con alianzas.</li>
+          <li>Fase 3: crecimiento nacional con programas de inclusión.</li>
+          <li>Fase 4: internacionalización en LATAM.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ACCESIBILIDAD: POUR -->
+    <section aria-labelledby="tit-pour" id="pour" style="padding:8px 0 28px">
+      <div class="card">
+        <h2 id="tit-pour">Accesibilidad (POUR)</h2>
+        <div class="checklist" role="list" aria-label="Checklist de accesibilidad">
+          <div class="check" role="listitem"><span class="dot" aria-hidden="true"></span><div><strong>Perceptible</strong><br>Contraste alto, textos claros, imágenes con <em>alt</em>.</div></div>
+          <div class="check" role="listitem"><span class="dot" aria-hidden="true"></span><div><strong>Operable</strong><br>Navegación por teclado y focos visibles.</div></div>
+          <div class="check" role="listitem"><span class="dot" aria-hidden="true"></span><div><strong>Comprensible</strong><br>Lenguaje simple, estructura lógica de encabezados.</div></div>
+          <div class="check" role="listitem"><span class="dot" aria-hidden="true"></span><div><strong>Robusto</strong><br>HTML semántico, etiquetas ARIA básicas.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INCLUSIÓN -->
+    <section id="inclusion" aria-labelledby="tit-inclusion" style="padding:8px 0 28px">
+      <div class="card">
+        <h2 id="tit-inclusion">Modelo de negocio inclusivo</h2>
+        <ul>
+          <li>Precio accesible financiado con alianzas y licencias.</li>
+          <li>Capacitación gratuita para cerrar brechas digitales.</li>
+          <li>Soporte humano sin barreras técnicas ni económicas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" aria-labelledby="tit-contacto" style="padding:8px 0 28px">
+      <div class="card">
+        <h2 id="tit-contacto">Contacto</h2>
+        <form aria-label="Formulario de contacto" onsubmit="event.preventDefault();alert('Gracias. Te contactaremos.');">
+          <label class="sr-only" for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" placeholder="Nombre" required aria-required="true" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.2);color:#fff;margin-bottom:10px" />
+          <label class="sr-only" for="correo">Correo</label>
+          <input id="correo" name="correo" type="email" placeholder="Correo" required aria-required="true" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.2);color:#fff;margin-bottom:10px" />
+          <label class="sr-only" for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿Cómo podemos ayudarte?" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.2);color:#fff;margin-bottom:14px"></textarea>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+        <p style="margin-top:14px">Tel. (55) 1234 5678 · Av. Ilustres 123, CDMX 01730 · <a href="mailto:hola@opentech.mx">hola@opentech.mx</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> OpenTech · Hecho con HTML accesible
+      <span class="sr-only">Fin de la página</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
